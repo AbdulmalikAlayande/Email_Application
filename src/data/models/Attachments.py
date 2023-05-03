@@ -1,0 +1,2 @@
+class Attachments:
+    pass
