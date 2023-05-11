@@ -61,14 +61,17 @@ class Folder_Repository_Implementation(Folder_Repository):
                 return each_folder
         return None
 
-    def get_all_folders_belonging_to_a_particular_user(self, user_id: str):  # -> List[Folder] | None:
-        count = 0
+    def get_all_folders_belonging_to_a_particular_user(self, user_id: str) -> List[Folder] | None:
+        list_of_folders_belonging_to_the_particular_user: List[Folder] = []
         for folder in self._list_of_folders:
             if folder.get_user_id() == user_id:
-               pass
+                list_of_folders_belonging_to_the_particular_user.append(folder)
+        print(list_of_folders_belonging_to_the_particular_user.__str__())
+        return list_of_folders_belonging_to_the_particular_user
 
     def delete_folder_by_folder_id(self, folder_id) -> bool:
-        pass
-
-    def update_folder_name(self, folder_id, folder_new_name) -> Folder | None:
-        pass
+        folder_to_be_deleted: Folder = self.find_folder_by_folder_id(folder_id)
+        if folder_to_be_deleted is not None:
+            self._list_of_folders.remove(folder_to_be_deleted)
+            return True
+        return False

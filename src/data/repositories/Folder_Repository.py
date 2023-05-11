@@ -34,7 +34,3 @@ class Folder_Repository(metaclass=ABCMeta):
     @abstractmethod
     def delete_folder_by_folder_id(self, folder_id) -> bool:
         pass
-
-    @abstractmethod
-    def update_folder_name(self, folder_id, folder_new_name) -> Folder | None:
-        pass

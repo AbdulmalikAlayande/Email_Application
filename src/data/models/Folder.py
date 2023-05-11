@@ -37,20 +37,20 @@ class Folder:
     def get_number_of_unread_messages(self) -> int:
         return self._number_of_unread_messages
 
-    # def __repr__(self):
-    #     f"""
-    #         Folder Id ==> {self._folder_id}
-    #         Folder Name ==> {self._folder_name}
-    #         User Id ==> {self._user_id}
-    #         Number Of Read Messages ==> {self._number_of_read_messages}
-    #         Number Of Unread Messages ==> {self._number_of_unread_messages}
-    #         """
+    def __repr__(self):
+        return f"""
+                Folder Id ==> {self._folder_id}
+                Folder Name ==> {self._folder_name}
+                User Id ==> {self._user_id}
+                Number Of Read Messages ==> {self._number_of_read_messages}
+                Number Of Unread Messages ==> {self._number_of_unread_messages}
+                """
 
     def __str__(self):
-        f"""
-            Folder Id ==> {self._folder_id}
-            Folder Name ==> {self._folder_name}
-            User Id ==> {self._user_id}
-            Number Of Read Messages ==> {self._number_of_read_messages}
-            Number Of Unread Messages ==> {self._number_of_unread_messages}
-            """
+        return f"""
+                Folder Id ==> {self._folder_id}
+                Folder Name ==> {self._folder_name}
+                User Id ==> {self._user_id}
+                Number Of Read Messages ==> {self._number_of_read_messages}
+                Number Of Unread Messages ==> {self._number_of_unread_messages}
+                """
